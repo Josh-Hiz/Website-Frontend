@@ -114,7 +114,7 @@ const gridHelper = new THREE.GridHelper(200,50);
 scene.add(gridHelper);
 
 //Allow free scroll (Will be removed when all geometry is set up)
-const freeControl = new OrbitControls(camera, renderer.domElement);
+const freeControl = new OrbitControls(camera, renderer.domElement); //Depercated
 
 function rotateCamera(){
 
@@ -153,7 +153,4 @@ const animate = function() {
   
     renderer.render(scene, camera);
   }
-  
    animate();
-
-   
