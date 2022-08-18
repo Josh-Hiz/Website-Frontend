@@ -8,7 +8,7 @@ import { CameraHelper, Euler, Int8Attribute, MeshBasicMaterial, Quaternion } fro
 
 //Create Scene
 //Create Camera (perspective)
-//Create Rendere
+//Create Renderer
 
 //Create Black canvas to mimic space
 
