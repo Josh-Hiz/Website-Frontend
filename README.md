@@ -1,4 +1,4 @@
-# Official Front-End to my portfolio Website
+# The Imporium
 
 This is the offical code for the front-end of my website "The Imporium"
 
