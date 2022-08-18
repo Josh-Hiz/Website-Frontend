@@ -50,10 +50,9 @@ canvas {
   }
   
   
-  
     header {
       background: var(--dark-bg);
-      grid-column: 2 / span 6;
+      grid-column: 2 / span 5;
       font-size: 2.5rem;
       padding: 2rem;
       margin-bottom: var(--spacing);
