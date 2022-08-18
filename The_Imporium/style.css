@@ -4,12 +4,21 @@ canvas {
     left: 0;
 }
 
+@font-face {
+  font-family: 'Elianto';
+  src: url('../The_Imporium/assets/fonts/elianto-regular-webfont.woff2') format('woff2'),
+       url('../The_Imporium/assets/fonts/elianto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 
 :root {
     --dark-bg: rgba(15, 15, 15, 0.95);
     --spacing: 350px;
   
-    font-family: brandon-grotesque, sans-serif;
+    font-family: 'Elianto', sans-serif;
     font-weight: 400;
     font-style: normal;
   }
@@ -29,8 +38,8 @@ canvas {
   }
   
   h1, h2, h3, blockquote {
-    font-family: elevon, sans-serif;
-    font-weight: 700;
+    font-family: 'Elianto', sans-serif;
+    font-weight: 500;
     font-style: normal;
   }
   
@@ -44,19 +53,47 @@ canvas {
   
     header {
       background: var(--dark-bg);
-      grid-column: 2 / span 5;
+      grid-column: 2 / span 6;
       font-size: 2.5rem;
       padding: 2rem;
       margin-bottom: var(--spacing);
     }
   
     section {
-      grid-column: 2 / 8;
+      grid-column: 2 / 10;
       padding: 1rem;
       background: var(--dark-bg);
       font-size: 1.25rem;
       line-height: 1.5;
       margin-bottom: var(--spacing);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    a {
+      background:
+        linear-gradient(
+          to right,
+          rgb(255, 255, 255),
+          rgb(255, 255, 255)
+        ),
+        linear-gradient(
+          to right,
+          rgba(255, 0, 0, 1),
+          rgba(255, 0, 180, 1),
+          rgba(0, 100, 200, 1)
+      );
+      background-size: 100% 3px, 0 3px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 400ms;
+    }
+    
+    a:hover {
+      background-size: 0 3px, 100% 3px;
     }
   
     blockquote {
@@ -64,6 +101,7 @@ canvas {
       padding: 0;
       grid-column: 2 / span 9;
       margin-bottom: var(--spacing);
+      font-size: 5rem;
     }
   
     blockquote p {
@@ -77,3 +115,42 @@ canvas {
     .left {
       grid-column: 6 / 12;
     }
+
+    /* List */
+ul {
+  counter-reset: index;  
+  padding: 0;
+  /* max-width: 300px; */
+}
+
+/* List element */
+li {
+  counter-increment: index; 
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  box-sizing: border-box;
+}
+
+
+/* Element counter */
+li::before {
+  content: counters(index, ".", decimal-leading-zero);
+  font-size: 1.5rem;
+  text-align: right;
+  font-weight: bold;
+  min-width: 50px;
+  padding-right: 12px;
+  font-variant-numeric: tabular-nums;
+  align-self: flex-start;
+  background-image: linear-gradient(to bottom, aquamarine, orangered);
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Element separation */
+li + li {
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
