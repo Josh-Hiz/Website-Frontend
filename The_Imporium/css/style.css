@@ -15,8 +15,8 @@ canvas {
 
 @font-face {
   font-family: 'Elianto';
-  src: url('../The_Imporium/assets/fonts/elianto-regular-webfont.woff2') format('woff2'),
-       url('../The_Imporium/assets/fonts/elianto-regular-webfont.woff') format('woff');
+  src: url('../assets/fonts/elianto-regular-webfont.woff2') format('woff2'),
+       url('../assets/fonts/elianto-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -150,7 +150,7 @@ li::before {
   padding-right: 12px;
   font-variant-numeric: tabular-nums;
   align-self: flex-start;
-  background-image: linear-gradient(to bottom, aquamarine, orangered);
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(255, 255, 255));
   background-attachment: fixed;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -159,6 +159,7 @@ li::before {
 
 /* Element separation */
 li + li {
+  
   border-top: 1px solid rgba(255,255,255,0.2);
 }
 

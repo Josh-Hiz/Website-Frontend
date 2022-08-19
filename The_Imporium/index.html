@@ -2,9 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="./css/splash.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/social-media-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Automata</title>
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
   </head>
   <body>
 
@@ -12,7 +15,7 @@
 
     <main>
 
-      <header style="border-radius: 25px;" data-scroll>
+      <header style="border-radius: 25px;" >
         <h1 class="subtitle">Joshua Hizgiaev</h1>
         <p class="subtitle">Welcome to the Automata</p>
       </header>
@@ -22,9 +25,9 @@
       </blockquote>
 
       <section style="border-radius: 25px;" data-scroll>
-        <h2 data-scroll>🎓 More about myself:</h2>
+        <h2>🎓 More about myself:</h2>
         <p >
-          I am incoming first year college student entering Stevens Institute of Technology under the 5 year program to receive my Masters of Science in Computer Science. 
+          I am an 18 year-old incoming first year college student entering Stevens Institute of Technology under the 5 year program to receive my Masters of Science in Computer Science. 
           Computer science allows me to explore my interests and passions of computational physics, complex mathematical simulations, and focus on a concentration in 
           artificial intelligence and machine learning.
         </p>
@@ -65,7 +68,7 @@
 
         </p>
 
-        <h2 data-scroll>This website's tech stack:</h2>
+        <h2 data-scroll>My Tech Stack:</h2>
 
         <p>
 
@@ -84,21 +87,80 @@
       </section>
 
       <blockquote data-scroll>
-        <p data-scroll>The best way out is always through <br>-Robert Frost</p>
+        <p >The best way out is always through <br>-Robert Frost</p>
       </blockquote>
 
       <section class="left" style="border-radius: 25px;" data-scroll>
-        <h2 data-scroll>🏫 Education</h2>
+        <h2>🏫 Education</h2>
 
         <h3 >Stevens Institute of Technology</h3>
         <div >Major: Computer Science</div>
         <p >
-          5 year Master of Science in Computer Science with a minor in Quantitative Finance. Due to the fact that I am an incoming freshman, not much will be displayed within this section as I simply have not been in college long enough to show potential achievements, courses, grade, etc.
+          5 year Master of Science in Computer Science with a minor in Quantitative Finance. 
+          Due to the fact that I am an incoming freshman, not much will be displayed within 
+          this section as I simply have not been in college long enough to show potential 
+          achievements, courses, grade, etc.
         </p>
         <h3 >Rancocas Valley Regional Highschool</h3>
         <div >Grade: Top 10%</div>
         <p >
-          Activities and societies: Programming Lead for RVR87 robotics team using Java and WPILib, Science National Honors Society, PLTW Engineering program, AP Physics C: Mechanics, AP Physics C: Electricity & Magnetism, honors only mathematics & science courses. - Linkedin
+          Activities and societies: Programming Lead for RVR87 robotics team using Java and WPILib, Science National Honors Society, 
+          PLTW Engineering program, AP Physics C: Mechanics, AP Physics C: Electricity & Magnetism, honors only mathematics & science 
+          courses. - Linkedin
+        </p>
+
+      </section>
+
+      <section class="left" style="border-radius: 25px;" data-scroll>
+        <h2>🏆 Honors, Achievements, & Personal Accomplishments/Certifications</h2>
+
+        <h3 >Stevens Institute of Technology:</h3>
+        <p >
+
+          <ul>
+
+            <li data-scroll><a href="https://www.stevens.edu/admissions/tuition-financial-aid/undergraduate-scholarships-aid/stevens-scholarships" target="_blank">Edwin A. Stevens Scholarship</a></li>
+            <li data-scroll>Gotta wait for more!</li>
+
+          </ul>
+          
+        </p>
+        <h3>Rancocas Valley Regional Highschool:</h3>
+
+        <p>
+
+          <ul>
+
+            <li data-scroll>Honor Roll, Student of Distinction: 2020-2022</li>
+            <li data-scroll>PLTW Nationally Certified</li>
+            <li data-scroll>Science Honors Society</li>
+            <li data-scroll>FIRST Robotics Scholarship</li>
+
+          </ul>
+
+        </p>
+
+        <h3>Skills, Accomplishments, & Certifications:</h3>
+
+        <p>
+
+          <ul>
+            
+            <li data-scroll>Fluent in Java, C++, and C</li>
+            <li data-scroll>Extensive Linux experience with Fedora, Ubuntu, Arch, and Manjaro Linux</li>
+            <li data-scroll>Beginner experience with Docker & Heroku</li>
+            <li data-scroll>Application development experience with Java & C/C++ using Java Swing AWT libraries for Java and ImGui, Qt, and SFML for C++</li>
+            <li data-scroll>Developed my own Algorithm representations and visualizations in Java, developed my own physics simulations and mathematical simulations in C++</li>
+            <li data-scroll>Release my own open-source software, JPaint</li>
+            <li data-scroll>Develop a scalable and efficient website and deploy it using Docker</li>
+            <li data-scroll>Become a C++ Developer Certification - Linkedin Learning</li>
+            <li data-scroll>Currently working on: Oracle Java SE 8 Associate Certification</li>
+            <li data-scroll>More to be added over time</li>
+
+
+          </ul>
+
+
         </p>
 
       </section>
@@ -107,8 +169,13 @@
         <p>Thank you for viewing my portfolio.</p>
       </blockquote>
 
-      <footer id="footer">
-        
+      <footer id="footer" data-scroll>
+        <div class="social-menu">
+          <ul>
+              <li><a href="https://github.com/Josh-Hiz" target="blank"><i class="fab fa-github"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/joshua-hizgiaev-386847240/" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+      </div>
       </footer>
  
 
@@ -143,8 +210,17 @@
 
     <script>
       ScrollOut();
+    </script>   
+
+    <script>
+      $('.loadingbar').delay(1500).animate({left: '0'}, 3000);
+      $('.loadingBox').delay(500).animate({opacity: '1'}, 1000);
+      $('.splashScreen').delay(4500).animate({top: '-100%'}, 1500);
+      $('.loadingCircle').delay(4500).animate({opacity: '0'}, 500);
+      $('body').delay(5000).queue(function(){
+	    $('body').addClass("visibleSplash");
+      });
     </script>
-   
 
   </body>
   

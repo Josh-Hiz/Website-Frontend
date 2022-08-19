@@ -1,4 +1,4 @@
-import './style.css'
+import './css/style.css'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { CameraHelper, Euler, Int8Attribute, MeshBasicMaterial, Quaternion } from 'three';
@@ -21,7 +21,7 @@ import { CameraHelper, Euler, Int8Attribute, MeshBasicMaterial, Quaternion } fro
 //Rotate each generated cube in a random x, y, and z direction 
 //Make sure the cube generation does not interfere with globe
 
-//LIGHTING IS DEAD LAST 
+//LIGHTING IS DEAD LAST
 
 var SEPERATION = 50, AMOUNTX = 60, AMOUNTY = 30;
 var particles, particle, count = 0;
@@ -47,7 +47,7 @@ const renderer = new THREE.WebGLRenderer({  //Render the scene
 
 renderer.setPixelRatio(window.devicePixelRatio); //Set the pixel ratio to the window device ratio
 renderer.setSize(window.innerWidth, window.innerHeight); //Make it full screen
-camera.position.setZ(45); 
+camera.position.setZ(50); 
 camera.position.setY(0); 
 
 renderer.render(scene, camera);
@@ -106,7 +106,7 @@ function randomStar(){
   star.userData.rz = Math.random() * 0.01 - 0.005;
   starGroup.add(star);
 }
-Array(500).fill().forEach(randomStar);
+Array(550).fill().forEach(randomStar);
 
 
 //Create Grid Helper (Will be removed when geometry is setup)
@@ -114,9 +114,12 @@ Array(500).fill().forEach(randomStar);
 // scene.add(gridHelper);
 
 //Allow free scroll (Will be removed when all geometry is set up)
-const freeControl = new OrbitControls(camera, renderer.domElement);
-freeControl.minPolarAngle = Math.PI/2;
-freeControl.maxPolarAngle = Math.PI/2;
+var controls = new OrbitControls(camera, renderer.domElement);
+controls.minPolarAngle = Math.PI/2;
+controls.maxPolarAngle = Math.PI/2;
+controls.minDistance = 50;
+controls.maxDistance = 0;
+
 
 // document.body.onscroll = rotateCamera
 
@@ -172,15 +175,15 @@ const animate = function() {
     });
 
     torus.rotation.y += 0.005;
-    torus.rotation.x += 0.005
+    torus.rotation.x += 0.015;
 
-    torusOne.rotation.x += 0.002
+    torusOne.rotation.x += 0.010
     torusOne.rotation.y += 0.005;
     torusTwo.rotation.y+= 0.005;
-    torusTwo.rotation.x += 0.002
+    torusTwo.rotation.x += 0.005
 
     globe.rotation.y += 0.001
-    // controls.update();
+    controls.update();
   
     renderer.render(scene, camera);
   }
