@@ -47,8 +47,8 @@ const renderer = new THREE.WebGLRenderer({  //Render the scene
 
 renderer.setPixelRatio(window.devicePixelRatio); //Set the pixel ratio to the window device ratio
 renderer.setSize(window.innerWidth, window.innerHeight); //Make it full screen
-camera.position.setZ(32); 
-camera.position.setY(-1.5); 
+camera.position.setZ(45); 
+camera.position.setY(0); 
 
 renderer.render(scene, camera);
 
@@ -62,7 +62,7 @@ torus.rotateX(90 * Math.PI / 180);
 scene.add(torus);
 
 //2nd Torus
-const geometryOne = new THREE.TorusGeometry(15,0.4,3,100);
+const geometryOne = new THREE.TorusGeometry(20,0.4,3,100);
 const materialOne = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe:false});
 const torusOne = new THREE.Mesh(geometryOne, materialOne);
 torusOne.rotateX(45 * Math.PI / 180);
@@ -71,7 +71,7 @@ torusOne.rotateY(135 * Math.PI / 180);
 scene.add(torusOne);
 
 //3rd Torus 
-const geometryTwo = new THREE.TorusGeometry(15,0.4,3,100);
+const geometryTwo = new THREE.TorusGeometry(25,0.4,3,100);
 const materialTwo = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe:false});
 const torusTwo = new THREE.Mesh(geometryTwo, materialTwo);
 torusTwo.rotateX(45 * Math.PI / 180);
@@ -85,7 +85,7 @@ const globeMaterial = new MeshBasicMaterial({color: 0xffffff, wireframe:true, tr
 const globe = new THREE.Mesh(globeGeometry,globeMaterial);
 scene.add(globe);
 
-const innerCircle = new THREE.SphereGeometry(3.25,25,25);
+const innerCircle = new THREE.SphereGeometry(3.25,25,9);
 const innerMaterial = new THREE.MeshBasicMaterial({color: 0x006CE0, wireframe: false, transparent: true, opacity: 0.7});
 const innerGlobe = new THREE.Mesh(innerCircle, innerMaterial);
 scene.add(innerGlobe);
@@ -96,37 +96,69 @@ scene.add(starGroup);
 //Add stars (Will start out with a test of spheres first, then cubes)
 function randomStar(){
   const geometry = new THREE.BoxGeometry(1, 1, 1);
-  const starMaterial = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: false});
+  const starMaterial = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true});
   const star = new THREE.Mesh(geometry, starMaterial);
 
-  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(150));
+  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(300));
   star.position.set(x,y,z);
   star.userData.rx = Math.random() * 0.01 - 0.005;
   star.userData.ry = Math.random() * 0.01 - 0.005;
   star.userData.rz = Math.random() * 0.01 - 0.005;
   starGroup.add(star);
 }
-Array(325).fill().forEach(randomStar);
+Array(500).fill().forEach(randomStar);
 
 
 //Create Grid Helper (Will be removed when geometry is setup)
-const gridHelper = new THREE.GridHelper(200,50);
-scene.add(gridHelper);
+// const gridHelper = new THREE.GridHelper(200,50);
+// scene.add(gridHelper);
 
 //Allow free scroll (Will be removed when all geometry is set up)
-const freeControl = new OrbitControls(camera, renderer.domElement); //Depercated
+const freeControl = new OrbitControls(camera, renderer.domElement);
+freeControl.minPolarAngle = Math.PI/2;
+freeControl.maxPolarAngle = Math.PI/2;
 
-function rotateCamera(){
+// document.body.onscroll = rotateCamera
 
-  axis = new THREE.Vector3(0,1,0);
+// function rotateCamera() {
 
-  var quaternion = new THREE.Quaternion().setFromAxisAngle( axis , 0.4)
+// var last = false;
+// var quaternion = new THREE.Quaternion;
+// var axis = new THREE.Vector3( 0, 1, 0 );
 
-  camera.rotation.set(new THREE.Euler().setFromQuaternion(quaternion));
+// renderer.domElement.addEventListener( 'mousedown', event => {
+	
+//   last = new THREE.Vector2( event.clientX, event.clientY );
 
-}
+// });
 
-document.body.onscroll = rotateCamera
+// renderer.domElement.addEventListener( 'mousemove', event => {
+  
+//   if( last ){
+    
+//     let delta = event.clientX - last.x;
+    
+//     camera.position.applyQuaternion( quaternion.setFromAxisAngle(
+//       axis, Math.PI * 2 * (delta / innerWidth)
+//     ));
+//     camera.lookAt( scene.position );
+    
+//     last.set( event.clientX, event.clientY );
+    
+//   }
+  
+//   renderer.render( scene, camera );
+  
+// });
+
+// renderer.domElement.addEventListener( 'mouseup', event => {
+	
+//   last = false;
+
+// });
+
+// }
+
 
 
 //Animate Atom
@@ -146,7 +178,6 @@ const animate = function() {
     torusOne.rotation.y += 0.005;
     torusTwo.rotation.y+= 0.005;
     torusTwo.rotation.x += 0.002
-
 
     globe.rotation.y += 0.001
     // controls.update();

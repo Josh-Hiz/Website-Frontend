@@ -1,3 +1,12 @@
+@rhino: #323b40;
+@rhinoMid: #4f585e;
+@teal: #0096a1;
+@tealMid: #0ebac7;
+@red: #fc625c;
+@amber: #fdbc40;
+@green: #34c748;
+@offWhite: #e9eaea;
+
 canvas {
     position: fixed;
     top: 0;
@@ -16,11 +25,14 @@ canvas {
 
 :root {
     --dark-bg: rgba(15, 15, 15, 0.95);
+    --typewriterSpeed: 6s;
+    --typewriterCharacters: 24;
     --spacing: 350px;
   
     font-family: 'Elianto', sans-serif;
     font-weight: 400;
     font-style: normal;
+  
   }
   
   
@@ -43,13 +55,6 @@ canvas {
     font-style: normal;
   }
   
-  canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  
-  
     header {
       background: var(--dark-bg);
       grid-column: 2 / span 5;
@@ -59,7 +64,7 @@ canvas {
     }
   
     section {
-      grid-column: 2 / 10;
+      grid-column: 2 / 9;
       padding: 1rem;
       background: var(--dark-bg);
       font-size: 1.25rem;
@@ -96,16 +101,18 @@ canvas {
     }
   
     blockquote {
-      margin: 0;
+      margin: 50px;
       padding: 0;
-      grid-column: 2 / span 9;
+      grid-column: 1 / span 12;
+      
       margin-bottom: var(--spacing);
-      font-size: 5rem;
+      font-size: 2rem;
     }
   
     blockquote p {
       color: black;
       background-color: white;
+      border-radius: 10px;
       font-size: 4rem;
       display: inline;
       line-height: 1;
@@ -116,6 +123,7 @@ canvas {
     }
 
     /* List */
+/* List */
 ul {
   counter-reset: index;  
   padding: 0;
@@ -153,3 +161,47 @@ li::before {
 li + li {
   border-top: 1px solid rgba(255,255,255,0.2);
 }
+
+
+.subtitle {
+  color: rgb(255, 255, 255);
+  /* font-size: 2rem;
+  font-weight: 400; */
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease forwards;
+}
+
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-scroll] {
+  transition: all 2s;
+}
+
+[data-scroll="in"] {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-scroll="out"] {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+
+#footer {
+  position: absolute;
+  display: table;
+  bottom: 0;
+  width: 100%;
+  height: 5.5rem;
+  text-align: center;
+  background-color: rgba(15, 15, 15, 0.95);
+}
+
