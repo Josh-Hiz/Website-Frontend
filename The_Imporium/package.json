@@ -4,13 +4,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview --port 8080"
   },
   "devDependencies": {
     "vite": "^2.9.14"
   },
   "dependencies": {
     "bootstrap": "^3.4.1",
+    "font-awesome": "^4.7.0",
     "postcss": "^8.4.16",
     "scroll-out": "^2.2.12",
     "three": "^0.133.1",
