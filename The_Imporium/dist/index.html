@@ -2,85 +2,102 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.2e05aaa7.ico">
     
     
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Automata</title>
     <script src="https://kit.fontawesome.com/ad50bd2b20.js" crossorigin="anonymous"></script>
-    <script type="module" crossorigin src="/assets/index.6035774e.js"></script>
-    <link rel="stylesheet" href="/assets/index.04adca21.css">
+    <script type="module" crossorigin src="/assets/index.ccb40c1b.js"></script>
+    <link rel="stylesheet" href="/assets/index.646ee5a5.css">
   </head>
+
   <body>
 
     <canvas id="background"> </canvas> 
 
-    <main>
+    <div class="topnav container brackets">
+      <a class="active" href="/">Home</a>
+      <a href="./pages/about.html">About</a>
+      <a href="./pages/contact.html">Contact</a>
+      <a href="./pages/projects.html">Projects</a>
+      <a href="./pages/experience.html">Experience</a>
+    </div>
 
+    <main>
       <header style="border-radius: 25px;" >
         <h1 class="subtitle">Joshua Hizgiaev</h1>
         <p class="subtitle">Welcome to the Automata</p>
       </header>
 
       <blockquote data-scroll>
-        <p>"Learning Java and C++ in one summer is hard."</p>
+        <p>"He's a trained professional!" - Eli Vance</p>
       </blockquote>
 
       <section style="border-radius: 25px;" data-scroll>
         <h2>🎓 More about myself:</h2>
         <p >
-          I am an 18 year-old incoming first year college student entering Stevens Institute of Technology under the 4 year program to receive my Bachelors of Science in Computer Science, however, 
+          I am an 19 year-old upcoming sophomore college student at Stevens Institute of Technology under the 4 year program to receive my Bachelors of Science in Computer Science, however, 
           I will be in the Accelerated Masters Program to receive my Masters degree in Computer science 1 year early. Computer science allows me to explore my interests and passions of 
-          computational physics, complex mathematical simulations, and focus on a concentration in Systems Engineering and Systems Software Engineering.
+          computational physics, complex mathematical simulations, and focus on a concentration in Artifical Intellgience and Machine Learning, all under the realm of Data Science and Analysis.
+        </p>
+
+        <p>
+          I currently work as a research assistant for <a href="https://mgree.github.io/" class="inline-link">Professor Michael Greenberg</a> at Stevens Institute of Technology and I am an Undergraduate Research Intern at Stevens Institute of Artificial
+          Intelligence, SIAI. My work with Greenberg focuses on the development of Static web generation, creating a course website and WASM tools to aid in the development of graduate courses, starting with 
+          CS-515: Intro to CS for graduate students these include. The tools I developed for it include both my Pyodide-WASM Python IDE to run coding challenges (similar to LeetCode) and my WASM-based REPL, 
+          these were developed using JavaScript and ACE editor. The GitHub repository for this project can be found <a href="https://github.com/Josh-Hiz/SGBCourses" target="_blank" class="inline-link">here</a>.
+        </p>
+
+        <p>
+          My work with SIAI is a lot more free and open-ended, my research is currently analyzing the growth in not only STEM but specifically research, engineering 
+          and most notably Data Science Jobs within the U.S. utilizng the Burning Glass Database and SQL to access the data. I want to see if there was a net gain in 
+          the demand for data science and machine learning development jobs and how big is this gain. After my analysis is done within Python and Jupyter Notebook, 
+          it might be contributed to a publication but It's still in heavy development. I had actually started with the ONET Job task statement dataset and analyzed 
+          the frequency of growing job tasks first as I wanted to learn how frequency analysis worked. However, it's accuracy can be scruitinized due to the lack of 
+          overall data points ONET has supplied.
         </p>
 
         <p >
-          In terms of programming experience, I am extremely interested in low-level programming with C & C++, but also object-oriented programming with Java. 
+          In terms of programming experience, I am very interested in C & C++, but also object-oriented programming with Java. 
           I also have web-development experience with React.js, Vite.js, and the HTML/CSS/JS stack. In terms of backend development I mainly use Node.js with 
-          the Node Package Manager (NPM). However as of currently, C/C++/Java are my goto languages, and I enjoy low-level, performance driven code. Future 
-          endeavors include learning Python to solve calculus and physics questions.
-        </p>
-
-        <p >
-          I am about 95% self taught in all aspects and skills I have acquired throughout my life. As examples I have self-taught myself Calculus 1 
-          (referred to as AB & BC in highschool) throughout the summer of 2022 using <a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a> 
-          and <a href="https://tutorial.math.lamar.edu/" target="_blank">Paul's Online Notes</a>. In terms of programming, well, my highschool never offered computer 
-          science courses at all to my own surprise and I learned programming in Java on my own using online courses, the Java documentation, and projects that mainly deal with physics, 
-          algorithms, etc. These projects helped me learn application development with GUI and regular UI libraries like Java Swing.
+          the Node Package Manager (NPM). However as of currently, C++, Java, and Python are my goto languages. Future 
+          endeavors include learning CUDA for optimized ML development with PyTorch or Tensorflow.
         </p>
 
       </section>
 
       <section class="light" style="border-radius: 25px;" data-scroll>
 
-        <h2 data-scroll>💻 My Favorite Projects:</h2>
-        <a href="https://github.com/Josh-Hiz" target="_blank" data-scroll>Github to all of my projects</a>
+        <h2 data-scroll>Notable Programming Projects</h2>
+        <a href="https://github.com/Josh-Hiz" target="_blank" class="inline-link">Github to all of my projects</a>
     
         <p >
 
           <ul >
 
-            <li data-scroll><a href="https://github.com/Josh-Hiz/PathfindingVisualizer" target="_blank">Dijkstra and A-star Path-finding Visualizer</a></li>
-            <li data-scroll><a href="https://github.com/Josh-Hiz/AlgorithmVisualizer" target="_blank">Sorting Algorithm Visualizer</a></li>
-            <li data-scroll><a href="https://github.com/Josh-Hiz/Website-Frontend" target="_blank">This Website! (front-end is publicly available)</a></li>
-            <li data-scroll><a href="https://github.com/Josh-Hiz/JPaint" target="_blank">JPaint: A minimalist bare-bones pixel-art program (My first officially released software)</a></li>
-            <li data-scroll><a href="https://github.com/Josh-Hiz/TicTacToe" target="_blank">JTicTacToe (My first game, but I made others like Minesweeper)</a></li>
+            <li><a href="https://github.com/Josh-Hiz/PathfindingVisualizer" target="_blank" class="inline-link">Dijkstra and A-star Path-finding Visualizer</a></li>
+            <li><a href="https://github.com/Josh-Hiz/AlgorithmVisualizer" target="_blank" class="inline-link">Sorting Algorithm Visualizer</a></li>
+            <li><a href="https://github.com/Josh-Hiz/Website-Frontend" target="_blank" class="inline-link">This Website! (front-end is publicly available)</a></li>
+            <li><a href="https://github.com/Josh-Hiz/JPaint" target="_blank" class="inline-link">JPaint: A minimalist bare-bones pixel-art program (My first officially released software)</a></li>
+            <li><a href="https://github.com/Josh-Hiz/TicTacToe" target="_blank" class="inline-link">JTicTacToe (My first game, but I made others like Minesweeper)</a></li>
 
           </ul>
 
         </p>
 
-        <h2 data-scroll>My Tech Stack:</h2>
+        <h2 data-scroll>My Tech Stack for this site:</h2>
 
         <p>
 
           <ul>
-            <li data-scroll><i class="fa-brands fa-js fa-lg"></i>JavaScript: Main programming language used</li>
-            <li data-scroll><a href="https://vitejs.dev/" target="blank"><i class="fa-solid fa-v fa-lg"></i></a>Vite.js: A rapid development tool used in modern web projects. This allows me to focus on simplicity, in order to produce an efficient website with speed and performance in mind. With this, I can develop my website with vanilla JavaScript.</li>
-            <li data-scroll><a href="https://nodejs.org/en/about/" target="blank"><i class="fa-brands fa-node-js fa-lg"></i></a>Node.js: An asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. Node allows me to use the Node Package Manager to install modules such as Three.js</li>
-            <li data-scroll><a href="https://threejs.org/" target="blank"><i class="fa-solid fa-cubes fa-lg"></i></a>Three.js: A powerful library that many web developers are including in their projects to give their website a three-dimensional edge.</li>
-            <li data-scroll><a href="https://git-scm.com/" target="blank"><i class="fa-brands fa-git-alt fa-lg"></i></a>Git/Github: Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</li>
-            <li data-scroll>No external Javascript frameworks such as React.js, Vue.js, etc. were used. This website was mostly made from scratch as an interesting learning experience using the resources mentioned above</li>
+            <li><i class="fa-brands fa-js fa-lg"></i>JavaScript: Main programming language used</li>
+            <li><a href="https://vitejs.dev/" target="blank"><i class="fa-solid fa-v fa-lg"></i></a>Vite.js: A rapid development tool used in modern web projects. This allows me to focus on simplicity, in order to produce an efficient website with speed and performance in mind. With this, I can develop my website with vanilla JavaScript.</li>
+            <li><a href="https://nodejs.org/en/about/" target="blank"><i class="fa-brands fa-node-js fa-lg"></i></a>Node.js: An asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. Node allows me to use the Node Package Manager to install modules such as Three.js</li>
+            <li><a href="https://threejs.org/" target="blank"><i class="fa-solid fa-cubes fa-lg"></i></a>Three.js: A powerful library that many web developers are including in their projects to give their website a three-dimensional edge.</li>
+            <li><a href="https://git-scm.com/" target="blank"><i class="fa-brands fa-git-alt fa-lg"></i></a>Git/Github: Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</li>
+            <li>No external Javascript frameworks such as React.js, Vue.js, etc. were used. This website was mostly made from scratch as an interesting learning experience using the resources mentioned above</li>
 
           </ul>
 
@@ -108,21 +125,22 @@
         <p >
           Activities and societies: Programming Lead for RVR87 robotics team using Java and WPILib, Science National Honors Society, 
           PLTW Engineering program, AP Physics C: Mechanics, AP Physics C: Electricity & Magnetism, honors only mathematics & science 
-          courses. - Linkedin
+          courses.
         </p>
 
       </section>
 
       <section class="left" style="border-radius: 25px;" data-scroll>
-        <h2>🏆 Honors, Achievements, & Personal Accomplishments/Certifications</h2>
+        <h2>🏆 Honors, Achievements, Personal Accomplishments/Certifications, and current academic record</h2>
 
         <h3 >Stevens Institute of Technology:</h3>
         <p >
 
           <ul>
 
-            <li data-scroll><a href="https://www.stevens.edu/admissions/tuition-financial-aid/undergraduate-scholarships-aid/stevens-scholarships" target="_blank">Edwin A. Stevens Scholarship</a></li>
-            <li data-scroll>Gotta wait for more!</li>
+            <li><a href="https://www.stevens.edu/admissions/tuition-financial-aid/undergraduate-scholarships-aid/stevens-scholarships" target="_blank" class="inline-link">Edwin A. Stevens Scholarship</a></li>
+            <li>Deans List for Fall of 2022 to Spring 2023</li>
+            <li>3.9 GPA</li>
 
           </ul>
           
@@ -130,39 +148,29 @@
         <h3>Rancocas Valley Regional Highschool:</h3>
 
         <p>
-
           <ul>
-
-            <li data-scroll>Honor Roll, Student of Distinction: 2020-2022</li>
-            <li data-scroll>PLTW Nationally Certified</li>
-            <li data-scroll>Science Honors Society</li>
-            <li data-scroll>FIRST Robotics Scholarship</li>
-
+            <li>Honor Roll, Student of Distinction: 2020-2022</li>
+            <li>PLTW Nationally Certified</li>
+            <li>Science Honors Society</li>
+            <li>FIRST Robotics Scholarship</li>
           </ul>
-
         </p>
 
         <h3>Skills, Accomplishments, & Certifications:</h3>
 
         <p>
-
-          <ul>
-            
-            <li data-scroll>Fluent in Java, C++, and C</li>
-            <li data-scroll>Extensive Linux experience with Fedora, Ubuntu, Arch, and Manjaro Linux</li>
-            <li data-scroll>Beginner experience with Docker & Heroku</li>
-            <li data-scroll>Application development experience with Java & C/C++ using Java Swing AWT libraries for Java and ImGui, OpenGL, and Raylib for C++</li>
-            <li data-scroll>Developed my own Algorithm representations and visualizations in Java, developed my own physics simulations and mathematical simulations in C++</li>
-            <li data-scroll>Release my own open-source software, JPaint</li>
-            <li data-scroll>Develop a scalable and efficient web-app in C++ and deploy it using Docker</li>
-            <li data-scroll>Become a C++ Developer Certification - Linkedin Learning</li>
-            <li data-scroll>Currently working on: Oracle Java SE 8 Associate Certification</li>
-            <li data-scroll>More to be added over time</li>
-
-
+          <ul> 
+            <li>Fluent in Java, C++, and Python</li>
+            <li>Extensive Linux experience with Fedora, Ubuntu, and Arch</li>
+            <li>Beginner experience with Docker & Heroku</li>
+            <li>Application development experience with Java & C/C++ using Java Swing AWT libraries for Java and ImGui, SFML, and Raylib for C++/C</li>
+            <li>Developed my own Algorithm representations and visualizations in Java, developed my own physics simulations and mathematical simulations in C++</li>
+            <li>Release my own open-source software, JPaint</li>
+            <li>Develop a scalable and efficient web-app in C++ and deploy it using Docker</li>
+            <li>Become a C++ Developer Certification - Linkedin Learning</li>
+            <li>Currently working on: Google Tensorflow Certification</li>
+            <li>More to be added over time!</li>
           </ul>
-
-
         </p>
 
       </section>
@@ -171,7 +179,7 @@
         <p>Thank you for viewing my portfolio.</p>
       </blockquote>
 
-      <footer id="footer" data-scroll>
+      <footer id="footer">
         <div class="social-menu">
           <ul>
               <li><a href="https://github.com/Josh-Hiz" target="blank"><i class="fab fa-github"></i></a></li>
@@ -184,46 +192,13 @@
     </main>
 
     
-
-    <!-- Script to make scrolling through go smoothly but it breaks list animation, why?-->
-    <script>
-      const body = document.body,
-      scrollWrap = document.getElementsByClassName("smooth-scroll")[0]
-      ,
-      height = scrollWrap.getBoundingClientRect().height -1;
-      speed = 0.04;
-
-    var offset = 0;
-
-    body.style.height = Math.floor(height) + "px";
-
-    function smoothScroll() {
-      offset += (window.pageYOffset - offset) * speed;
-
-      var scroll = "translateY(-" + offset + "px) translateZ(0)";
-      scrollWrap.style.transform = scroll;
-
-      callScroll = requestAnimationFrame(smoothScroll);
-    }
-    smoothScroll();
-    </script>
+   
 
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 
     <script>
       ScrollOut();
     </script>   
-
-    <script>
-      $('.loadingbar').delay(1500).animate({left: '0'}, 3000);
-      $('.loadingBox').delay(500).animate({opacity: '1'}, 1000);
-      $('.splashScreen').delay(4500).animate({top: '-100%'}, 1500);
-      $('.loadingCircle').delay(4500).animate({opacity: '0'}, 500);
-      $('body').delay(5000).queue(function(){
-	    $('body').addClass("visibleSplash");
-      });
-    </script>
-
   </body>
   
 </html>
