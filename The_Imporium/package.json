@@ -7,7 +7,7 @@
     "serve": "vite preview --port 8080"
   },
   "devDependencies": {
-    "vite": "^2.9.14"
+    "vite": "^2.9.16"
   },
   "dependencies": {
     "bootstrap": "^3.4.1",
