@@ -1,4 +1,4 @@
-import './css/style.css'
+import '../css/style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { CameraHelper, Euler, Int8Attribute, MeshBasicMaterial, Quaternion } from 'three';
@@ -99,7 +99,7 @@ function randomStar(){
   const starMaterial = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true});
   const star = new THREE.Mesh(geometry, starMaterial);
 
-  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(300));
+  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(350));
   star.position.set(x,y,z);
   star.userData.rx = Math.random() * 0.01 - 0.005;
   star.userData.ry = Math.random() * 0.01 - 0.005;
@@ -119,49 +119,6 @@ controls.minPolarAngle = Math.PI/2;
 controls.maxPolarAngle = Math.PI/2;
 controls.minDistance = 50;
 controls.maxDistance = 0;
-
-
-// document.body.onscroll = rotateCamera
-
-// function rotateCamera() {
-
-// var last = false;
-// var quaternion = new THREE.Quaternion;
-// var axis = new THREE.Vector3( 0, 1, 0 );
-
-// renderer.domElement.addEventListener( 'mousedown', event => {
-	
-//   last = new THREE.Vector2( event.clientX, event.clientY );
-
-// });
-
-// renderer.domElement.addEventListener( 'mousemove', event => {
-  
-//   if( last ){
-    
-//     let delta = event.clientX - last.x;
-    
-//     camera.position.applyQuaternion( quaternion.setFromAxisAngle(
-//       axis, Math.PI * 2 * (delta / innerWidth)
-//     ));
-//     camera.lookAt( scene.position );
-    
-//     last.set( event.clientX, event.clientY );
-    
-//   }
-  
-//   renderer.render( scene, camera );
-  
-// });
-
-// renderer.domElement.addEventListener( 'mouseup', event => {
-	
-//   last = false;
-
-// });
-
-// }
-
 
 
 //Animate Atom
@@ -188,3 +145,9 @@ const animate = function() {
     renderer.render(scene, camera);
   }
    animate();
+
+window.addEventListener('resize', function(){
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+});
