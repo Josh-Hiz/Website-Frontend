@@ -99,14 +99,14 @@ function randomStar(){
   const starMaterial = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true});
   const star = new THREE.Mesh(geometry, starMaterial);
 
-  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(350));
+  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(1000));
   star.position.set(x,y,z);
   star.userData.rx = Math.random() * 0.01 - 0.005;
   star.userData.ry = Math.random() * 0.01 - 0.005;
   star.userData.rz = Math.random() * 0.01 - 0.005;
   starGroup.add(star);
 }
-Array(550).fill().forEach(randomStar);
+Array(1500).fill().forEach(randomStar);
 
 
 //Create Grid Helper (Will be removed when geometry is setup)
